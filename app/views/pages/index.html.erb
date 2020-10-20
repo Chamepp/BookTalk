@@ -8,22 +8,26 @@
         <!-- NavItems -->
         <nav class="navbar">
 
+          <!-- Logo Brand -->
+          <%= image_tag("RootLogo.png", :alt => "RootLogo", :class => "RootlLogo") %>
+
 
           <div class="nav-item">
 
-            <!-- Logo Brand -->
-            <%= link_to root_path do %>
-              <%= image_tag("RootLogo.png", :alt => "RootLogo", :class => "RootlLogo") %>
-            <% end %>
-
             <!-- Link Tags -->
-            <%= link_to "Home", url: root_path, :class => 'nav-link' %>
-            <%= link_to "Explore", url: root_path, :class => 'nav-link' %>
-            <%= link_to "About", url: root_path, :class => 'nav-link' %>
+            <%= link_to "Home", url: root_path, :id => 'nav-link' %>
+            <%= link_to "Explore", url: root_path, :id => 'nav-link' %>
+            <%= link_to "About", url: root_path, :id => 'nav-link' %>
 
-            <!-- SignUp & Login Buttons -->
-            <%= link_to "LogIn", root_path, :class => 'btn btn-primary' %>
-            <%= link_to "SignUp", root_path, :class => 'btn btn-primary' %>
+          </div>
+
+
+
+          <!-- SignUp & Login Buttons -->
+          <div class="nav-buttons">
+
+            <%= link_to "LogIn", root_path, :class => 'btn btn-primary login-button' %>
+            <%= link_to "SignUp", root_path, :class => 'btn btn-primary signup-button' %>
 
           </div>
 
