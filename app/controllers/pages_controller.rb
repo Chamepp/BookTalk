@@ -2,7 +2,7 @@ class PagesController < ApplicationController
 
   # Main Page
   def index
-    @welcome = 'Hello World !!!'
+    @logo = 'BookTalk'
   end
 
 end
