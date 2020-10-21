@@ -5,4 +5,10 @@ class PagesController < ApplicationController
     @logo = 'BookTalk'
   end
 
+  # Explore Page
+  def explore
+
+  end
+
+
 end
