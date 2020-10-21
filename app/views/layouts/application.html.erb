@@ -1,16 +1,28 @@
 <!DOCTYPE html>
 <html>
   <head>
+
+    <!-- Meta Tags -->
     <title>BookTalk</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <!-- Main Sources -->
     <%= stylesheet_link_tag 'https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css'%>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <!-- Font Sources -->
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Capriola&display=swap" rel="stylesheet">
+
+
   </head>
 
   <body class="body">
     <%= yield %>
   </body>
+
 </html>
