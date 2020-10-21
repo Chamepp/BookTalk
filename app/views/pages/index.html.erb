@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html>
 <!-- Navigation Bar -->
 <div class="text-center">
   <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
@@ -40,3 +42,34 @@
   </div>
 
 </div>
+
+
+
+
+
+<!-- Body Contents -->
+<body>
+
+
+<main class="mx-auto inner flex-column">
+  <div class="main img-fluid">
+
+    <!-- Main Image -->
+    <%= image_tag("RootImage.png", :alt => 'RootImage', :class => "RootImage float-right img-fluid")%>
+
+
+    <!-- Main Content -->
+    <h1 class="main-content">Learning <br> From Home</h1>
+
+
+  </div>
+</main>
+
+<% yield %>
+</body>
+
+
+
+
+
+</html>
