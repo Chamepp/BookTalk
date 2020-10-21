@@ -16,17 +16,59 @@ $root-color: #152734;
 .nav-item a {
 
   color: white;
-  font-family: 'Comfortaa', cursive;
+  font-family: 'Capriola', sans-serif;
   font-size: 20px;
   text-decoration: none;
   margin-right: 20px;
   margin-left: 20px;
 
+}
+
+.nav-item a:hover {
+
+  color: #08fcac;
 
 }
+
 
 .signup-button {
 
   margin-left: 20px;
+  color: white;
+  border-color: transparent;
+  background-color: #08fcac;
+  padding: 15px 20px;
+  font-family: 'Rubik', sans-serif;
+
+}
+
+.login-button {
+
+  font-family: 'Rubik', sans-serif;
+  background-color: transparent;
+  border-color: transparent;
+  padding: 15px 20px;
+  color: #08fcac;
+
+}
+
+.main-content {
+
+  color: white;
+  margin-left: 220px;
+  margin-top: 210px;
+  font-size: 12vh;
+  font-family: 'Quicksand', sans-serif;
+
+}
+
+
+.main .RootImage {
+
+  max-width: 50vh;
+  width: auto;
+  height: auto;
+  margin-right: 260px;
+  margin-left: 100px;
 
 }
