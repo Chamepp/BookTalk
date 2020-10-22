@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+
+
+
+
+<!-- Body Contents -->
+<body>
+
+<!-- MainTitle & SubTitle -->
+<div>
+  <%= image_tag("SignupLogo.png", :alt => 'Signup Logo', :class => 'SignupLogo img-fluid') %>
+  <h1 class="archive-info">+ 32,000 Book Archives</h1>
+</div>
+
+<!-- Illustration -->
+<%= image_tag("SignupImage.png", :alt => 'Signup Image', :class => 'SignupImage img-fluid') %>
+
+<!-- Form Control -->
+<div class="card signup-form float-right">
+  <%= image_tag("RootLogo.png", :alt => 'FormImage', :class => 'FormImage') %>
+  <div class="card-body">
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+</div>
+
+<% yield %>
+</body>
+
+
+
+
+
+</html>
