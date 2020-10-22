@@ -10,5 +10,10 @@ class PagesController < ApplicationController
 
   end
 
+  # SignUp Page
+  def signup
+
+  end
+
 
 end
