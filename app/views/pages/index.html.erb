@@ -17,9 +17,9 @@
           <div class="nav-item">
 
             <!-- Link Tags -->
-            <%= link_to "Home", url: root_path, :id => 'nav-link' %>
-            <%= link_to "Explore", url: explore_path, :id => 'nav-link' %>
-            <%= link_to "About", url: root_path, :id => 'nav-link' %>
+            <%= link_to "Home", root_path %>
+            <%= link_to "Explore", explore_path %>
+            <%= link_to "About", root_path %>
 
           </div>
 
@@ -29,7 +29,7 @@
           <div class="nav-buttons">
 
             <%= link_to "LogIn", root_path, :class => 'btn btn-primary login-button' %>
-            <%= link_to "SignUp", root_path, :class => 'btn btn-primary signup-button' %>
+            <%= link_to "SignUp", signup_path, :class => 'btn btn-primary signup-button' %>
 
           </div>
 
