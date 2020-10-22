@@ -73,3 +73,70 @@ $root-color: #152734;
   margin-left: 100px;
 
 }
+
+
+.main-text {
+
+  margin-top: 50px;
+  color: #08fcac;
+  font-size: 10vh;
+  font-family: 'Nunito', sans-serif;
+
+}
+
+.sub-text {
+
+  margin-top: 50px;
+  color: #3e9996;
+  font-size: 4vh;
+  font-family: 'Nunito', sans-serif;
+
+}
+
+.searchbar {
+
+  display: block;
+  margin : 0 auto;
+  margin-top: 30px;
+  max-width: 750px;
+  min-height: 50px;
+  border-color: white;
+  color: #08fcac;
+
+}
+
+.searchbar:hover {
+
+  border-color: #152734;
+
+}
+
+.SignupLogo {
+
+  margin-top: 50px;
+  margin-left: 150px;
+
+}
+
+.SignupImage {
+
+  margin-top: 50px;
+  margin-left: 150px;
+
+}
+
+.signup-form {
+
+  margin-right: 250px;
+  max-width: 20vw;
+
+}
+
+.archive-info {
+
+  margin-left: 150px;
+  color: #08fcac;
+  font-size: 5vh;
+  font-family: 'Pacifico', cursive;
+
+}
