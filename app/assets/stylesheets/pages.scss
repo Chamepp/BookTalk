@@ -98,7 +98,7 @@ $root-color: #152734;
   display: block;
   margin : 0 auto;
   margin-top: 30px;
-  max-width: 750px;
+  max-width: 100vh;
   min-height: 50px;
   border-color: white;
   color: #08fcac;
@@ -108,6 +108,14 @@ $root-color: #152734;
 .searchbar:hover {
 
   border-color: #152734;
+
+}
+
+.searchbar::placeholder {
+
+  color: #152734;
+  font-size: 20px;
+  font-family: 'Nunito', sans-serif;
 
 }
 
@@ -125,18 +133,85 @@ $root-color: #152734;
 
 }
 
-.signup-form {
+.archive-info {
 
-  margin-right: 250px;
-  max-width: 20vw;
+  margin-left: 175px;
+  color: #08fcac;
+  font-size: 3vh;
+  font-family: 'Pacifico', cursive;
 
 }
 
-.archive-info {
+.whole {
 
-  margin-left: 150px;
-  color: #08fcac;
-  font-size: 5vh;
-  font-family: 'Pacifico', cursive;
+  background-image: url('SearchBackground.png');
+
+}
+
+.FormImage {
+
+  background-color: #002e41;
+  max-width: 100%;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+
+}
+
+.signup-form {
+
+  margin-right: 250px;
+  max-width: 25vw;
+  min-height: 70vh;
+  background-color: #173c52;
+  margin-bottom: 100px;
+
+}
+
+.signup-firstname {
+
+  max-width: 10vw;
+  min-height: 5vh;
+  margin-top: 50px;
+  background-color: #e4ddd4;
+
+}
+
+.signup-lastname {
+
+  max-width: 10vw;
+  min-height: 5vh;
+  margin-top: 50px;
+  background-color: #e4ddd4;
+
+}
+
+.signup-email {
+
+  margin-top: 80px;
+  max-width: 20vw;
+  min-height: 5vh;
+  background-color: #e4ddd4;
+
+}
+
+.signup-password {
+
+  margin-top: 50px;
+  margin-bottom: 10px;
+  max-width: 20vw;
+  min-height: 5vh;
+  background-color: #e4ddd4;
+
+}
+
+.signup-button-main {
+
+  margin-top: 60px;
+  margin-left: 32%;
+  padding: 1.5vh 2vw;
+  font-size: 20px;
+  font-family: 'Fredoka One', cursive;
+  border-color: #002e41;
+  background-color: #002e41;
 
 }
