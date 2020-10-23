@@ -215,3 +215,56 @@ $root-color: #152734;
   background-color: #002e41;
 
 }
+
+.login-email-label {
+
+  margin-top: 30px;
+  margin-bottom: 20px;
+  color: white;
+  font-family: 'Fredoka One', cursive;
+
+}
+.login-password-label {
+
+  margin-top: 60px;
+  margin-bottom: 20px;
+  color: white;
+  font-family: 'Fredoka One', cursive;
+
+}
+
+.login-email {
+
+  max-width: 20vw;
+  min-height: 5vh;
+  background-color: #e4ddd4;
+
+}
+
+.login-password {
+
+  max-width: 20vw;
+  min-height: 5vh;
+  background-color: #e4ddd4;
+
+}
+
+.login-form {
+
+  max-width: 25vw;
+  max-height: 70vh;
+  background-color: #173c52;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.login-instruct {
+
+  font-size: 10vh;
+  color: white;
+  margin-top: 40px;
+  font-family: 'Pacifico', cursive;
+
+}
