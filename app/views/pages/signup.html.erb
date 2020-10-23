@@ -8,22 +8,45 @@
 <!-- Body Contents -->
 <body>
 
+
 <!-- MainTitle & SubTitle -->
 <div>
   <%= image_tag("SignupLogo.png", :alt => 'Signup Logo', :class => 'SignupLogo img-fluid') %>
   <h1 class="archive-info">+ 32,000 Book Archives</h1>
 </div>
 
+<!-- Form Control -->
+<div class="card signup-form float-right">
+  <%= image_tag("FormLogo.png", :alt => 'FormImage', :class => 'FormImage') %>
+
+  <!-- Form Contents -->
+  <div class="card-body">
+
+    <div>
+    <!-- FirstName -->
+    <input type="text" class="signup-firstname form-control float-left">
+
+    <!-- LastName -->
+    <input type="text" class="signup-lastname form-control float-right">
+    </div>
+
+    <!-- Email -->
+    <input type="email" class="signup-email form-control float-left"> <br>
+
+    <!-- Password -->
+    <input type="password" class="signup-password form-control float-left">
+
+    <br>
+
+    <!-- Finalization -->
+    <button class="signup-button-main btn btn-primary lead">SignUp</button>
+
+  </div>
+</div>
+
 <!-- Illustration -->
 <%= image_tag("SignupImage.png", :alt => 'Signup Image', :class => 'SignupImage img-fluid') %>
 
-<!-- Form Control -->
-<div class="card signup-form float-right">
-  <%= image_tag("RootLogo.png", :alt => 'FormImage', :class => 'FormImage') %>
-  <div class="card-body">
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-  </div>
-</div>
 
 <% yield %>
 </body>
