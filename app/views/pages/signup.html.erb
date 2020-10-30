@@ -21,25 +21,35 @@
 
   <!-- Form Contents -->
   <div class="card-body">
+    <%= form_tag create_path, method: :post do %>
 
-    <div>
-    <!-- FirstName -->
-    <input type="text" class="signup-firstname form-control float-left">
 
-    <!-- LastName -->
-    <input type="text" class="signup-lastname form-control float-right">
-    </div>
+      <div>
+        <!-- First Action -->
+        <%= label_tag :fname, 'Firstname', {:class => 'signup-firstname-label'} %> <br>
+        <%= text_field_tag signup_path, :fname , :placeholder => 'Firstname', :class => 'signup-firstname form-control float-right' %>
 
-    <!-- Email -->
-    <input type="email" class="signup-email form-control float-left"> <br>
+      <!-- Second Action -->
+        <%= label_tag :lname, 'LastName', {:class => 'signup-lastname-label'} %> <br>
+        <%= text_field_tag signup_path, :lname , :placeholder => 'Lastname', :class => 'signup-lastname form-control float-left' %>
+      </div>
 
-    <!-- Password -->
-    <input type="password" class="signup-password form-control float-left">
+      <!-- Third Action -->
+      <p>
+        <%= label_tag :email, 'Email', {:class => 'signup-email-label'} %> <br>
+        <%= text_field_tag signup_path , :email , :placeholder => 'Email Address', :class => 'signup-email form-control float-left' %>
+      </p>
 
-    <br>
+      <!-- Fourth Action -->
+      <p>
+        <%= label_tag :password, 'Password', {:class => 'signup-password-label'} %> <br>
+        <%= password_field_tag signup_path, :password, :placeholder => 'Password', :class => 'signup-password form-control float-left' %>
+      </p>
 
-    <!-- Finalization -->
-    <button class="signup-button-main btn btn-primary lead">SignUp</button>
+      <!-- Finalization -->
+      <%= submit_tag "SignUp", {:class => 'signup-button-main btn btn-primary lead'} %>
+
+    <% end %>
   </div>
 
 </div>
