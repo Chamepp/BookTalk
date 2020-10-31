@@ -6,9 +6,12 @@ Rails.application.routes.draw do
   # Main Routes
   get 'explore' => 'pages#explore', as: 'explore'
   get 'signup' => 'pages#signup', as: 'signup'
-  get 'login' => 'pages#login', as: 'login'
+  get 'login' => 'sessions#login', as: 'login'
+  get 'logout' => 'sessions#destroy', as: 'destroy-login'
 
   # Authentication Routes
   post 'users' => 'pages#create', as: 'create'
+  post 'login' => 'sessions#create', as: 'login-create'
+
 
 end
