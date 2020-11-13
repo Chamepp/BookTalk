@@ -5,13 +5,15 @@ Rails.application.routes.draw do
 
   # Main Routes
   get 'explore' => 'pages#explore', as: 'explore'
-  get 'signup' => 'pages#signup', as: 'signup'
+
+  # SignUp Sources
+  get 'signup' => 'registrations#signup', as: 'signup'
+  post 'users' => 'registrations#create', as: 'create'
+
+
+  # Login Sources
   get 'login' => 'sessions#login', as: 'login'
-  get 'logout' => 'sessions#destroy', as: 'destroy-login'
-
-  # Authentication Routes
-  post 'users' => 'pages#create', as: 'create'
   post 'login' => 'sessions#create', as: 'login-create'
-
+  get 'logout' => 'sessions#destroy', as: 'destroy-login'
 
 end
