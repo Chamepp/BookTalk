@@ -4,6 +4,7 @@ $root-color: #152734;
 .body {
 
   background-color: $root-color;
+  overflow-x: hidden;
 
 }
 
@@ -294,3 +295,78 @@ $root-color: #152734;
   font-family: 'Pacifico', cursive;
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+.scrolling-wrapper {
+  overflow-x: auto;
+}
+
+.main-items-subject {
+
+  margin-left: 30px;
+  color: white;
+  font-family: 'Fredoka One', cursive;
+
+}
+
+.subtitle {
+  font-size: 1.25em;
+  opacity: 0.65;
+}
+
+.card-block {
+  height: 250px;
+  background-color: #fff;
+  border: none;
+  background-position: center;
+  background-size: cover;
+  transition: all 0.2s ease-in-out !important;
+  border-radius: 24px;
+  &:hover{
+    transform: translateY(-5px);
+    box-shadow: none;
+  }
+}
+
+.card-1 {
+  margin-left: 30px;
+  background-color: #4158D0;
+  background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+}
+
+.card-2 {
+  background-color: #0093E9;
+  background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+}
+
+.card-3 {
+  background-color: #00DBDE;
+  background-image: linear-gradient(90deg, #00DBDE 0%, #FC00FF 100%);
+}
+
+.card-4 {
+  background-color: #FBAB7E;
+  background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
+}
+
+.card-5 {
+  background-color: #85FFBD;
+  background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);
+}
+
+.card-6 {
+  margin-right: 30px;
+  background-color: #FA8BFF;
+  background-image: linear-gradient(45deg, #FA8BFF 0%, #2BD2FF 52%, #2BFF88 90%);
+}
+
