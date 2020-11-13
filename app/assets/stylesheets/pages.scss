@@ -159,6 +159,7 @@ $root-color: #152734;
 
 .signup-firstname-label {
 
+  margin-top: 30px;
   color: white;
   font-family: 'Fredoka One', cursive;
 
@@ -172,6 +173,7 @@ $root-color: #152734;
 
 .signup-email-label {
 
+  margin-top: 80px;
   color: white;
   font-family: 'Fredoka One', cursive;
 
@@ -179,6 +181,7 @@ $root-color: #152734;
 
 .signup-password-label {
 
+  margin-top: 15px;
   color: white;
   font-family: 'Fredoka One', cursive;
 
@@ -198,7 +201,6 @@ $root-color: #152734;
 
   max-width: 10vw;
   min-height: 5vh;
-  margin-top: 50px;
   background-color: #e4ddd4;
 
 }
@@ -207,14 +209,12 @@ $root-color: #152734;
 
   max-width: 10vw;
   min-height: 5vh;
-  margin-top: 50px;
   background-color: #e4ddd4;
 
 }
 
 .signup-email {
 
-  margin-top: 80px;
   max-width: 20vw;
   min-height: 5vh;
   background-color: #e4ddd4;
@@ -223,7 +223,6 @@ $root-color: #152734;
 
 .signup-password {
 
-  margin-top: 50px;
   margin-bottom: 10px;
   max-width: 20vw;
   min-height: 5vh;
