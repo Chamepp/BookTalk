@@ -21,18 +21,13 @@ class PagesController < ApplicationController
 
     if user
       session[:user_id] = user.id
-      flash[:success] = 'Successfully Created The User !'
-      puts('Yaaaayyyy !')
-      redirect_to root_path
+      render json: {
+        status: :created,
+        user: :user
+      }
 
     else
-      flash[:warning] = 'Could Not Create The User !'
-      puts('NOoooooooooooo')
-      redirect_to signup_path
-
+      render json: { status: 500 }
     end
   end
-
-  # Login Page
-  def login; end
 end
