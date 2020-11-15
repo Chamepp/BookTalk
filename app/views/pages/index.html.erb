@@ -1,5 +1,11 @@
 <!DOCTYPE html>
 <html>
+
+<!-- SlideShow Scripts -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+
 <!-- Navigation Bar -->
 <div class="text-center">
   <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
@@ -19,7 +25,7 @@
             <!-- Link Tags -->
             <%= link_to "Home", root_path %>
             <%= link_to "Explore", explore_path %>
-            <%= link_to "About", root_path %>
+            <%= link_to "About", about_path %>
 
           </div>
 
@@ -67,12 +73,60 @@
   </div>
 </main>
 
+<br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
+
+
+<!-- Slide Show -->
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+
+  <!-- Target Links -->
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+
+  <!-- Image Block -->
+  <div class="carousel-inner">
+
+    <!-- Image One -->
+    <div class="carousel-item active" id="slide-one">
+      <%= image_tag("SlideOne.png", class: "d-block w-100", width: "1100", height: "500") %>
+    </div>
+
+    <!-- Image Two -->
+    <div class="carousel-item" id="slide-two">
+      <%= image_tag("SlideTwo.png", class: "d-block w-100", width: "1100", height: "500") %>
+    </div>
+
+    <!-- Image Three -->
+    <div class="carousel-item" id="slide-three">
+      <%= image_tag("SlideThree.png", class: "d-block w-100", width: "1100", height: "500") %>
+    </div>
+
+  </div>
+
+  <!-- Next Button -->
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+
+  <!-- Previous Button -->
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+
+</div>
 
 <br> <br> <br> <br> <br> <br> <br> <br> <br>
 
 
 <!-- Items Scroll -->
-<h1 class="mt-5 main-items-subject">Jump Into Subjects</h1>
+<h1 class="mt-5 main-items-subject">Jump Into Genres</h1>
+
+<!-- Card Deck -->
 <div class="scrolling-wrapper row flex-row flex-nowrap mt-4 pb-4">
 
   <!-- Card One -->
@@ -107,6 +161,43 @@
 </div>
 
 
+
+<br> <br> <br> <br> <br> <br>
+
+<div class="text-center">
+  <h1 class="index-info text-center">We Are The</h1> <br>
+  <h1 class="index-legend">Legends</h1>
+</div>
+
+<br> <br> <br>
+
+<div class="why-stage">
+
+  <div class="card text-white text-center bg-dark mb-3 sub-one" style="max-width: 18rem;">
+    <div class="card-header">Fancy</div>
+    <div class="card-body">
+      <h5 class="card-title">Fancy Card Title</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    </div>
+  </div>
+
+  <div class="card text-white text-center bg-dark mb-3 sub-two" style="max-width: 18rem;">
+    <div class="card-header">Cool</div>
+    <div class="card-body">
+      <h5 class="card-title">Cool Card Title</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    </div>
+  </div>
+
+  <div class="card text-white text-center bg-dark mb-3 sub-three" style="max-width: 18rem;">
+    <div class="card-header">Easy</div>
+    <div class="card-body">
+      <h5 class="card-title">Easy Card Title</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    </div>
+  </div>
+
+</div>
 
 
 
