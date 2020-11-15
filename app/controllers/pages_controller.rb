@@ -7,6 +7,9 @@ class PagesController < ApplicationController
   # Explore Page
   def explore; end
 
+  # About Page
+  def about; end
+
   # SignUp Page
   def signup; end
 
