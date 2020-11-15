@@ -5,6 +5,7 @@ Rails.application.routes.draw do
 
   # Main Routes
   get 'explore' => 'pages#explore', as: 'explore'
+  get 'about' => 'pages#about', as: 'about'
 
   # SignUp Sources
   get 'signup' => 'registrations#signup', as: 'signup'
