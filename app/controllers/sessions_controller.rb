@@ -1,4 +1,7 @@
 class SessionsController < ApplicationController
+
+  include CurrentUserConcern
+
   def new; end
 
   # Login View
@@ -17,8 +20,26 @@ class SessionsController < ApplicationController
 
   # Destroy LogIn
   def destroy
-    session[:user_id] = nil
-    flash[:success] = 'Logged Out Successfully !'
-    redirect_to root_path
+    reset_session
+    render json: {
+        status: 200,
+        logged_out: false
+    }
   end
+
+  # Logged In
+  def logged_in
+    if @current_user
+      render json: {
+        logged_in: true,
+        user: @current_user
+      }
+
+    else
+      render json: {
+        logged_in: false
+      }
+    end
+  end
+
 end
