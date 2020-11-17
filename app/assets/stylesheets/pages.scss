@@ -457,7 +457,64 @@ $root-color: #152734;
   margin-left: 30px;
   background-color: #fff;
   border: none;
-  border-radius-bottom: 24px;
   background-image: linear-gradient(45deg, #FA8BFF 0%, #2BD2FF 52%, #2BFF88 90%);
+
+}
+
+.category-block {
+
+  width: 300px;
+  height: 200px;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: #fff;
+  border: none;
+  background-position: center;
+  background-size: cover;
+  transition: all 0.2s ease-in-out !important;
+  border-radius: 24px;
+  &:hover{
+    transform: translateY(-5px);
+    box-shadow: none;
+  }
+
+}
+
+
+
+
+.page-footer {
+
+  background-color: #0b1822;
+  color: white;
+
+}
+
+.footer-copyright {
+
+  background-color: #07131c;
+  color: white;
+  font-family: 'Capriola', sans-serif;
+  font-size: 10px;
+
+}
+
+.footer-brand {
+
+  font-size: 30px;
+  font-family: 'Fredoka One', cursive;
+
+}
+
+.footer-subject {
+
+  font-family: 'Quicksand', sans-serif;
+
+}
+
+.footer-content {
+
+  font-family: 'Rubik', sans-serif;
+  text-decoration: none;
 
 }
