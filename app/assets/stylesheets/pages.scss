@@ -378,28 +378,21 @@ $root-color: #152734;
 
 }
 
-.why-stage {
-
-
-}
-
-.sub-one {
+.sub-why {
 
   color: white;
+  font-family: 'Rubik', sans-serif;
+  font-size: 20px;
 
 }
 
-.sub-two {
+.why-body {
 
-  color: white;
+  background-color: #152734;
 
-}
-
-.sub-three {
-
-  color: white;
 
 }
+
 
 .deck-info {
 
@@ -516,5 +509,15 @@ $root-color: #152734;
 
   font-family: 'Rubik', sans-serif;
   text-decoration: none;
+
+}
+
+.overall-hr{
+
+  border: 1px;
+  border: solid;
+  border-radius: 10px 10px 10px 10px;
+  width: 500px;
+  border-color: #F7CE68;
 
 }
