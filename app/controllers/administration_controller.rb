@@ -5,6 +5,6 @@ class AdministrationController < ApplicationController
 
   # Control Products Page
   def control_products; end
-  
+
 
 end
