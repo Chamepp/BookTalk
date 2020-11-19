@@ -20,5 +20,6 @@ Rails.application.routes.draw do
   # Admin Sources
   get 'admin' => 'administration#administration', as: 'admin'
   get 'admin/products' => 'administration#control_products', as: 'control_product'
+  get 'admin/customers' => 'administration#control_customers', as: 'control_customers'
 
 end
