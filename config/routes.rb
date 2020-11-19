@@ -17,4 +17,8 @@ Rails.application.routes.draw do
   post 'login' => 'sessions#create', as: 'login-create'
   get 'logout' => 'sessions#destroy', as: 'destroy-login'
 
+  # Admin Sources
+  get 'admin' => 'administration#administration', as: 'admin'
+  get 'admin/products' => 'administration#control_products', as: 'control_product'
+
 end
