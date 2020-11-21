@@ -220,7 +220,7 @@
 </div>
 
 
-<br> <br> <br>
+
 
 
 
@@ -315,8 +315,45 @@
 
 </div>
 
-<br> <br> <br> <br> <br> <br>
 
+
+<!-- Administration Card -->
+<div class="card-deck d-flex justify-content-center">
+
+  <!-- Split Start -->
+
+    <% @card.each do |card| %>
+
+
+      <!-- Admin Card -->
+      <div class="card card-deck-item shadow-sm">
+
+        <!-- Header Image -->
+        <img class="card-img-top" src="..." alt="Card image cap">
+
+        <!-- Card Body -->
+        <div class="card-body">
+          <h4 class="card-title"> <%= card.cardname %> </h4>
+          <h5 class="card-title">$ <%= card.cardprice %></h5>
+          <p class="card-text"> <%= card.carddes %> </p>
+          <%= link_to "+ Add To Cart", card_path(card), :class => 'btn btn-primary' %>
+          <a href="#" class="btn btn-danger">
+            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-heart-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+            </svg>
+          </a>
+        </div>
+
+        <!-- Card Footer -->
+        <div class="card-footer">
+          <small class="text-muted">Last updated 3 mins ago</small>
+        </div>
+
+      </div>
+
+    <% end %>
+
+</div>
 
 
 
@@ -476,6 +513,28 @@
 
 </footer>
 
+
+<script>
+    var $pages = $('.page');
+    var child = '<div class="card card-deck-item shadow-sm"></div>';
+
+
+        var childAdded = false;
+
+        $pages.each(function () {
+            var $page = $(this);
+            if ($page.children().length < 3) {
+                $page.append(child);
+                childAdded = true;
+                return false;
+            }
+
+        if (!childAdded) {
+            alert('You can not add anymore divs!');
+        }
+
+    });
+</script>
 
 
 
