@@ -411,6 +411,7 @@ $root-color: #152734;
 .card-deck-item {
 
   max-width: 25vw;
+  margin-top: 50px;
   background-color: #152734;
   color: white;
   font-family: 'Nunito', sans-serif;
@@ -513,4 +514,32 @@ $root-color: #152734;
   width: 500px;
   border-color: #F7CE68;
 
+}
+
+// Bootstrap 4 breakpoints & gutter
+$grid-breakpoints: (
+        xs: 0,
+        sm: 576px,
+        md: 768px,
+        lg: 992px,
+        xl: 1200px
+) !default;
+
+$grid-gutter-width: 30px !default;
+
+// number of cards per line for each breakpoint
+$cards-per-line: (
+        xs: 3,
+        sm: 3,
+        md: 3,
+        lg: 3,
+        xl: 3
+);
+
+@each $name, $breakpoint in $grid-breakpoints {
+  @media (min-width: $breakpoint) {
+    .card-deck .card {
+      flex: 0 0 calc(#{100 / map-get($cards-per-line, $name)}% - #{$grid-gutter-width});
+    }
+  }
 }
