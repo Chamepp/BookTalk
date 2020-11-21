@@ -5,13 +5,18 @@ class PagesController < ApplicationController
   end
 
   # Explore Page
-  def explore; end
+  def explore
+    @card = Card.all
+  end
 
   # About Page
   def about; end
 
   # SignUp Page
   def signup; end
+
+  # New Card
+
 
   # SignUp Creation
   def create
