@@ -4,6 +4,11 @@ class CreateCards < ActiveRecord::Migration[6.0]
       t.string :cardname
       t.integer :cardprice
       t.string :carddes
+      t.string :cardgen
+      t.integer :cardpage
+      t.integer :cardyear
+      t.integer :carddownload
+      t.string :cardpremium
 
       t.timestamps
     end
