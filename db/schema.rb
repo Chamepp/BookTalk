@@ -10,14 +10,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_19_163951) do
+ActiveRecord::Schema.define(version: 2020_11_22_062945) do
 
   create_table "cards", force: :cascade do |t|
     t.string "cardname"
     t.integer "cardprice"
     t.string "carddes"
+    t.string "cardgen"
+    t.integer "cardpage"
+    t.integer "cardyear"
+    t.integer "carddownload"
+    t.string "cardpremium"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "comments", force: :cascade do |t|
+    t.string "commentbody"
+    t.integer "card_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["card_id"], name: "index_comments_on_card_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -29,4 +42,5 @@ ActiveRecord::Schema.define(version: 2020_11_19_163951) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  add_foreign_key "comments", "cards"
 end
