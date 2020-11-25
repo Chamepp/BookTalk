@@ -1,0 +1,18 @@
+
+
+
+<!-- Comments Form --->
+<h4 class="comment-introduction">Create Comments</h4> <br>
+
+<%= form_for([@card, @card.comments.build]) do |f| %>
+
+  <!-- Create Comment -->
+  <p>
+    <%= f.label :commentbody, "Comment" , :class => 'comments-label' %> <br>
+    <%= f.text_field :commentbody, :placeholder => 'Comments', :class => 'comments-textfield form-control'  %> <br>
+  </p>
+
+  <!-- Finalization -->
+  <%= f.submit "Create", :class => 'comments-button btn btn-primary' %>
+
+<% end %>

@@ -1,0 +1,17 @@
+
+<br> <br>
+
+<!-- Comments View -->
+<h3 class="comment-introduction">Comments</h3> <br>
+
+<% @card.comments.each do |comment| %>
+
+  <div class="card comments-card">
+    <div class="card-body">
+      <strong>
+        <%= comment.commentbody %>
+      </strong>
+    </div>
+  </div>
+
+<% end %>
