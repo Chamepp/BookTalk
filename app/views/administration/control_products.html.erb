@@ -414,7 +414,9 @@
       <h2 style="font-family: 'Pacifico', cursive; color: #2BFF88">Create Cards</h2>
       <hr style="border-color: white;">
 
-      <%= form_for :card, url: control_product_path do |f| %>
+
+      <%= form_for :card , url: control_product_path do |f| %>
+
 
         <!-- First Action -->
         <%= f.label :cardname, "Name", :class => 'create-labels' %> <br>
@@ -424,21 +426,47 @@
         <%= f.label :cardprice, "Price", :class => 'create-labels' %> <br>
         <%= f.number_field :cardprice, :placeholder => 'Price', :class => 'form-control'%> <br>
 
+
         <!-- Third Action -->
         <%= f.label :carddes, "Description", :class => 'create-labels' %> <br>
         <%= f.text_area :carddes, :placeholder => 'Description', :class => 'form-control' %> <br>
+
+        <!-- Fourth Action -->
+        <%= f.label :cardgen, "Genre", :class => 'create-labels' %> <br>
+        <%= f.select :cardgen, options_for_select([
+                                                   ['Comedy','Comedy'], ['Drama','Drama'], ['Romance','Romance'], ['Horror','Horror'], ['Romance','Romance'],
+                                                   ['Classic','Classic'], ['Life','Life'], ['Sports','Sports'], ['Science','Science']
+                                                                                                        ], params[:cardgen]),
+                                                   {}, { :class => 'span3 controls controls-row form-control' } %> <br>
+
+        <!-- Fifth Action -->
+        <%= f.label :cardpage, "Pages", :class => 'create-labels' %> <br>
+        <%= f.number_field :cardpage, :placeholder => 'Pages', :class => 'form-control'%> <br>
+
+        <!-- Sixth Action -->
+        <%= f.label :cardyear, "Year", :class => 'create-labels' %> <br>
+        <%= f.number_field :cardyear, :placeholder => 'Year', :class => 'form-control'%> <br>
+
+        <!-- Seventh Action -->
+        <%= f.label :carddownload, "Downloads", :class => 'create-labels' %> <br>
+        <%= f.number_field :carddownload, :placeholder => 'Downloads', :class => 'form-control'%> <br>
+
+        <!-- Eighth Action -->
+        <%= f.label :cardpremium, "Premium", :class => 'create-labels' %> <br>
+
+        <%= f.radio_button :cardpremium, true %>
+        <%= f.label :cardpremium, "Yes", :value => "Premium", :style => "color: white; font-family: rubik, cursive; margin-right: 20px;" %>
+
+        <%= f.radio_button :cardpremium, false, :checked => true %>
+        <%= f.label :cardpremium, "No", :value => "Free",  :style => "color: white; font-family: rubik, cursive;" %>
+
+
+        <br> <br>
 
         <!-- Finalization -->
         <%= f.submit "Create", :class => 'btn btn-primary' %>
 
       <% end %>
-
-      <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
-      <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
-      <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
-      <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
-
-      <br>
 
 
     </main>
