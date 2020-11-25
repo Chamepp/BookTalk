@@ -1,0 +1,203 @@
+<html>
+
+
+<!-- Navigation Bar -->
+<div class="text-center">
+  <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+
+    <header class="masthead mb-auto">
+      <div class="inner">
+
+        <!-- NavItems -->
+        <nav class="navbar">
+
+          <!-- Logo Brand -->
+          <%= image_tag("RootLogo.png", :alt => "RootLogo", :class => "RootlLogo") %>
+
+
+          <div class="nav-item">
+
+            <!-- Link Tags -->
+            <%= link_to "Home", root_path %>
+            <%= link_to "Explore", explore_path %>
+            <%= link_to "About", about_path %>
+
+          </div>
+
+
+
+
+          <!-- SignUp & Login Buttons -->
+          <% if @user == false %>
+            <div class="nav-buttons">
+              <%= link_to "LogIn", login_path, :class => 'btn btn-primary login-button' %>
+              <%= link_to "SignUp", signup_path, :class => 'btn btn-primary signup-button' %>
+            </div>
+
+
+            <!-- User Controls & Profiles -->
+          <% else %>
+
+            <div>
+
+              <!-- Wishlist Icon -->
+              <%= link_to explore_path, :class => 'user-icons', :style => 'text-decoration: none;' do %>
+                <span class="badge badge-primary badge-pill">32</span>
+                <svg width="1.8em" height="1.8em" viewBox="0 0 16 16" class="bi bi-heart-fill icon-hover" fill="white" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+                </svg>
+              <% end %>
+
+
+
+
+              <!-- Cart Icon -->
+              <%= link_to explore_path, :class => 'user-icons', :style => 'text-decoration: none;' do %>
+                <span class="badge badge-primary badge-pill">6</span>
+                <svg width="1.8em" height="1.8em" viewBox="0 0 16 16" class="bi bi-bag-fill user-icons icon-hover" fill="white" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" d="M8 1a2.5 2.5 0 0 0-2.5 2.5V4h5v-.5A2.5 2.5 0 0 0 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5z"/>
+                </svg>
+              <% end %>
+
+              <!-- Profile Icon -->
+              <%= link_to explore_path, :class => 'user-icons', :style => 'text-decoration: none;' do %>
+                <svg width="1.8em" height="1.8em" viewBox="0 0 16 16" class="bi bi-person-circle user-icons icon-hover" fill="white" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M13.468 12.37C12.758 11.226 11.195 10 8 10s-4.757 1.225-5.468 2.37A6.987 6.987 0 0 0 8 15a6.987 6.987 0 0 0 5.468-2.63z"/>
+                  <path fill-rule="evenodd" d="M8 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                  <path fill-rule="evenodd" d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z"/>
+                </svg>
+              <% end %>
+
+            </div>
+
+          <% end %>
+
+
+        </nav>
+
+      </div>
+    </header>
+
+  </div>
+
+</div>
+
+
+<body style="background-color: #152734; overflow-x: hidden;">
+
+</body>
+
+
+<br> <br> <br> <br> <br> <br>
+<br> <br> <br> <br> <br> <br>
+<br> <br> <br> <br> <br> <br>
+<br> <br> <br> <br> <br> <br>
+<br> <br> <br> <br> <br> <br>
+<br> <br> <br> <br> <br> <br>
+
+<!--Footer-->
+<footer class="page-footer text-center text-md-left pt-4">
+
+  <!--Footer Links-->
+  <div class="container-fluid">
+    <div class="row">
+
+      <!--First column-->
+      <div class="col-md-3">
+        <h5 class="font-weight-bold mb-4 footer-brand">BookTalk</h5>
+        <div class="footer-content">
+          <p>
+            Here you can use rows and columns here to oyour footer contentrganize<br>
+            n use rows and columns rows and columns here to oyo <br>
+            and columns here to oyour footer contentr
+          </p>
+        </div>
+      </div>
+
+
+      <hr class="w-100 clearfix d-md-none">
+
+      <!--Second column-->
+      <div class="col-md-2 mx-auto">
+        <h5 class="font-weight-bold mb-4 footer-subject">Contact Us</h5>
+        <div class="footer-content">
+          <p>booktalk@gmail.com</p>
+          <p>+1 360 345 8034</p>
+          <p>88 93 9238</p>
+        </div>
+
+      </div>
+
+
+      <hr class="w-100 clearfix d-md-none">
+
+      <!--Third column-->
+      <div class="col-md-2 mx-auto">
+        <h5 class="font-weight-bold mb-4 footer-subject">Follow Us</h5>
+        <div class="footer-content">
+          <p>
+            <img width="24px" height="24px" src="data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjUxMnB0IiB2aWV3Qm94PSIwIDAgNTEyIDUxMiIgd2lkdGg9IjUxMnB0IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Im00NzUuMDc0MjE5IDBoLTQzOC4xNDg0MzhjLTIwLjM5NDUzMSAwLTM2LjkyNTc4MSAxNi41MzEyNS0zNi45MjU3ODEgMzYuOTI1NzgxdjQzOC4xNDg0MzhjMCAyMC4zOTQ1MzEgMTYuNTMxMjUgMzYuOTI1NzgxIDM2LjkyNTc4MSAzNi45MjU3ODFoNDM4LjE0ODQzOGMyMC4zOTQ1MzEgMCAzNi45MjU3ODEtMTYuNTMxMjUgMzYuOTI1NzgxLTM2LjkyNTc4MXYtNDM4LjE0ODQzOGMwLTIwLjM5NDUzMS0xNi41MzEyNS0zNi45MjU3ODEtMzYuOTI1NzgxLTM2LjkyNTc4MXptLTI5My40NjQ4NDQgMzg3aC02Mi4zNDc2NTZ2LTE4Ny41NzQyMTloNjIuMzQ3NjU2em0tMzEuMTcxODc1LTIxMy4xODc1aC0uNDA2MjVjLTIwLjkyMTg3NSAwLTM0LjQ1MzEyNS0xNC40MDIzNDQtMzQuNDUzMTI1LTMyLjQwMjM0NCAwLTE4LjQwNjI1IDEzLjk0NTMxMy0zMi40MTAxNTYgMzUuMjczNDM3LTMyLjQxMDE1NiAyMS4zMjgxMjYgMCAzNC40NTMxMjYgMTQuMDAzOTA2IDM0Ljg1OTM3NiAzMi40MTAxNTYgMCAxOC0xMy41MzEyNSAzMi40MDIzNDQtMzUuMjczNDM4IDMyLjQwMjM0NHptMjU1Ljk4NDM3NSAyMTMuMTg3NWgtNjIuMzM5ODQ0di0xMDAuMzQ3NjU2YzAtMjUuMjE4NzUtOS4wMjczNDMtNDIuNDE3OTY5LTMxLjU4NTkzNy00Mi40MTc5NjktMTcuMjIyNjU2IDAtMjcuNDgwNDY5IDExLjYwMTU2My0zMS45ODgyODIgMjIuODAwNzgxLTEuNjQ4NDM3IDQuMDA3ODEzLTIuMDUwNzgxIDkuNjA5Mzc1LTIuMDUwNzgxIDE1LjIxNDg0NHYxMDQuNzVoLTYyLjM0Mzc1cy44MTY0MDctMTY5Ljk3NjU2MiAwLTE4Ny41NzQyMTloNjIuMzQzNzV2MjYuNTU4NTk0YzguMjg1MTU3LTEyLjc4MTI1IDIzLjEwOTM3NS0zMC45NjA5MzcgNTYuMTg3NS0zMC45NjA5MzcgNDEuMDE5NTMxIDAgNzEuNzc3MzQ0IDI2LjgwODU5MyA3MS43NzczNDQgODQuNDIxODc0em0wIDAiLz48L3N2Zz4=" />
+            LinkedIn
+          </p>
+
+          <p>
+            <img width="24px" height="24px" src="data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjUxMnB0IiB2aWV3Qm94PSIwIDAgNTEyIDUxMiIgd2lkdGg9IjUxMnB0IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Im0zNzYgOTFoLTI0MGMtMjQuODEyNSAwLTQ1IDIwLjE4NzUtNDUgNDV2MjQwYzAgMjQuODEyNSAyMC4xODc1IDQ1IDQ1IDQ1aDI0MGMyNC44MTI1IDAgNDUtMjAuMTg3NSA0NS00NXYtMjQwYzAtMjQuODEyNS0yMC4xODc1LTQ1LTQ1LTQ1em0tMTIwIDI3MGMtNTcuODkwNjI1IDAtMTA1LTQ3LjEwOTM3NS0xMDUtMTA1czQ3LjEwOTM3NS0xMDUgMTA1LTEwNSAxMDUgNDcuMTA5Mzc1IDEwNSAxMDUtNDcuMTA5Mzc1IDEwNS0xMDUgMTA1em0xMDUtMTgwYy0xNi41MzkwNjIgMC0zMC0xMy40NjA5MzgtMzAtMzBzMTMuNDYwOTM4LTMwIDMwLTMwIDMwIDEzLjQ2MDkzOCAzMCAzMC0xMy40NjA5MzggMzAtMzAgMzB6bTAgMCIvPjxwYXRoIGQ9Im0yNTYgMTgxYy00MS4zNTE1NjIgMC03NSAzMy42NDg0MzgtNzUgNzVzMzMuNjQ4NDM4IDc1IDc1IDc1IDc1LTMzLjY0ODQzOCA3NS03NS0zMy42NDg0MzgtNzUtNzUtNzV6bTAgMCIvPjxwYXRoIGQ9Im00MzYgMGgtMzYwYy00MS4zNTE1NjIgMC03NiAzNC42NDg0MzgtNzYgNzZ2MzYwYzAgNDEuMzUxNTYyIDM0LjY0ODQzOCA3NiA3NiA3NmgzNjBjNDEuMzUxNTYyIDAgNzYtMzQuNjQ4NDM4IDc2LTc2di0zNjBjMC00MS4zNTE1NjItMzQuNjQ4NDM4LTc2LTc2LTc2em0xNSAzNzZjMCA0MS4zNTE1NjItMzMuNjQ4NDM4IDc1LTc1IDc1aC0yNDBjLTQxLjM1MTU2MiAwLTc1LTMzLjY0ODQzOC03NS03NXYtMjQwYzAtNDEuMzUxNTYyIDMzLjY0ODQzOC03NSA3NS03NWgyNDBjNDEuMzUxNTYyIDAgNzUgMzMuNjQ4NDM4IDc1IDc1em0wIDAiLz48L3N2Zz4=" />
+            Instagram
+          </p>
+
+          <p>
+            <img width="24px" height="24px" src="data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjUxMnB0IiB2aWV3Qm94PSIwIDAgNTEyIDUxMiIgd2lkdGg9IjUxMnB0IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Im0yNjEuNDc2NTYyIDEyNC40Njg3NWMtNzAuMjQ2MDkzIDAtMTI3LjM3NSA1Ny4xMDU0NjktMTI3LjQwNjI1IDEyNy4zMDA3ODEtLjAwNzgxMiAyNC4wNTQ2ODggNi43MjY1NjMgNDcuNDgwNDY5IDE5LjQ3MjY1NyA2Ny43NWwzLjAyNzM0MyA0LjgxNjQwNy0xMi44NjcxODcgNDYuOTgwNDY4IDQ4LjE5OTIxOS0xMi42NDA2MjUgNC42NTIzNDQgMi43NTc4MTNjMTkuNTUwNzgxIDExLjYwMTU2MiA0MS45NjQ4NDMgMTcuNzM4MjgxIDY0LjgxNjQwNiAxNy43NDYwOTRoLjA1MDc4MWM3MC4xOTE0MDYgMCAxMjcuMzIwMzEzLTU3LjEwOTM3NiAxMjcuMzUxNTYzLTEyNy4zMDg1OTQuMDExNzE4LTM0LjAxOTUzMi0xMy4yMjI2NTctNjYuMDAzOTA2LTM3LjI2NTYyNi05MC4wNjY0MDYtMjQuMDQyOTY4LTI0LjA2MjUtNTYuMDE5NTMxLTM3LjMyNDIxOS05MC4wMzEyNS0zNy4zMzU5Mzh6bTc0LjkwNjI1IDE4Mi4wMzUxNTZjLTMuMTkxNDA2IDguOTM3NS0xOC40ODQzNzQgMTcuMDk3NjU2LTI1LjgzOTg0MyAxOC4xOTkyMTktNi41OTc2NTcuOTg0Mzc1LTE0Ljk0MTQwNyAxLjM5NDUzMS0yNC4xMTMyODEtMS41MTU2MjUtNS41NjI1LTEuNzY1NjI1LTEyLjY5MTQwNy00LjEyMTA5NC0yMS44MjgxMjYtOC4wNjI1LTM4LjQwMjM0My0xNi41NzgxMjUtNjMuNDg0Mzc0LTU1LjIzNDM3NS02NS4zOTg0MzctNTcuNzg5MDYyLTEuOTE0MDYzLTIuNTU0Njg4LTE1LjYzMjgxMy0yMC43NTM5MDctMTUuNjMyODEzLTM5LjU5Mzc1IDAtMTguODM1OTM4IDkuODkwNjI2LTI4LjA5NzY1NyAxMy4zOTg0MzgtMzEuOTI1NzgyIDMuNTExNzE5LTMuODMyMDMxIDcuNjYwMTU2LTQuNzg5MDYyIDEwLjIxMDkzOC00Ljc4OTA2MiAyLjU1MDc4MSAwIDUuMTA1NDY4LjAyMzQzNyA3LjMzNTkzNy4xMzI4MTIgMi4zNTE1NjMuMTE3MTg4IDUuNTA3ODEzLS44OTQ1MzEgOC42MTMyODEgNi41NzAzMTMgMy4xOTE0MDYgNy42NjQwNjIgMTAuODQ3NjU2IDI2LjUgMTEuODA0Njg4IDI4LjQxNDA2Mi45NTcwMzEgMS45MTc5NjkgMS41OTM3NSA0LjE1MjM0NC4zMjAzMTIgNi43MDcwMzEtMS4yNzczNDQgMi41NTQ2ODgtNy4zMDA3ODEgMTAuMjUtOS41NzAzMTIgMTMuMDg5ODQ0LTEuNjkxNDA2IDIuMTA5Mzc1LTMuOTE0MDYzIDMuOTgwNDY5LTEuNjc5Njg4IDcuODEyNSAyLjIzMDQ2OSAzLjgyODEyNSA5LjkxNzk2OSAxNi4zNjMyODIgMjEuMjk2ODc1IDI2LjUxMTcxOSAxNC42MjUgMTMuMDM5MDYzIDI2Ljk2MDkzOCAxNy4wNzgxMjUgMzAuNzg5MDYzIDE4Ljk5NjA5NCAzLjgyNDIxOCAxLjkxNDA2MiA2LjA1ODU5NCAxLjU5Mzc1IDguMjkyOTY4LS45NTcwMzEgMi4yMzA0NjktMi41NTQ2ODggOS41NzAzMTMtMTEuMTc1NzgyIDEyLjEyMTA5NC0xNS4wMDc4MTMgMi41NTA3ODItMy44MzIwMzEgNS4xMDU0NjktMy4xOTE0MDYgOC42MTMyODItMS45MTQwNjMgMy41MTE3MTggMS4yNzM0MzggMjIuMzMyMDMxIDEwLjUzNTE1NyAyNi4xNjAxNTYgMTIuNDQ5MjE5IDMuODI4MTI1IDEuOTE3OTY5IDYuMzc4OTA2IDIuODc1IDcuMzM1OTM3IDQuNDcyNjU3Ljk2MDkzOCAxLjU5NzY1Ni45NjA5MzggOS4yNTc4MTItMi4yMzA0NjkgMTguMTk5MjE4em0wIDAiLz48cGF0aCBkPSJtNDc1LjA3NDIxOSAwaC00MzguMTQ4NDM4Yy0yMC4zOTQ1MzEgMC0zNi45MjU3ODEgMTYuNTMxMjUtMzYuOTI1NzgxIDM2LjkyNTc4MXY0MzguMTQ4NDM4YzAgMjAuMzk0NTMxIDE2LjUzMTI1IDM2LjkyNTc4MSAzNi45MjU3ODEgMzYuOTI1NzgxaDQzOC4xNDg0MzhjMjAuMzk0NTMxIDAgMzYuOTI1NzgxLTE2LjUzMTI1IDM2LjkyNTc4MS0zNi45MjU3ODF2LTQzOC4xNDg0MzhjMC0yMC4zOTQ1MzEtMTYuNTMxMjUtMzYuOTI1NzgxLTM2LjkyNTc4MS0zNi45MjU3ODF6bS0yMTMuNjQ4NDM4IDQwNS4wNTA3ODFjLS4wMDM5MDYgMCAuMDAzOTA3IDAgMCAwaC0uMDYyNWMtMjUuNjQ0NTMxLS4wMTE3MTktNTAuODQzNzUtNi40NDE0MDYtNzMuMjIyNjU2LTE4LjY0NDUzMWwtODEuMjIyNjU2IDIxLjMwMDc4MSAyMS43MzgyODEtNzkuMzc1Yy0xMy40MTAxNTYtMjMuMjI2NTYyLTIwLjQ2NDg0NC00OS41NzgxMjUtMjAuNDUzMTI1LTc2LjU3NDIxOS4wMzUxNTYtODQuNDUzMTI0IDY4Ljc2OTUzMS0xNTMuMTYwMTU2IDE1My4yMjI2NTYtMTUzLjE2MDE1NiA0MC45ODQzNzUuMDE1NjI1IDc5LjQ1NzAzMSAxNS45Njg3NSAxMDguMzgyODEzIDQ0LjkxNzk2OSAyOC45Mjk2ODcgMjguOTUzMTI1IDQ0Ljg1MTU2MiA2Ny40Mzc1IDQ0LjgzNTkzNyAxMDguMzYzMjgxLS4wMzUxNTYgODQuNDU3MDMyLTY4Ljc3NzM0MyAxNTMuMTcxODc1LTE1My4yMTg3NSAxNTMuMTcxODc1em0wIDAiLz48L3N2Zz4=" />
+            WhatsApp
+          </p>
+        </div>
+      </div>
+
+
+      <hr class="w-100 clearfix d-md-none">
+
+      <!--Fourth column-->
+      <div class="col-md-2 mx-auto">
+        <h5 class="font-weight-bold mb-4 footer-subject">Terms & Conditions</h5>
+        <div class="footer-content">
+          <p style="font-size: 12px">
+            Here you can use rows and columns here to oyour footer contentrganize<br>
+            n use rows and columns rows and columns here to oyo
+            and columns here to oyour footer s rows and columns contentr
+            lumns here to oyo s rows and columns s rows and columns <br>
+            and columns here to oyour footer contentr.
+          </p>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+
+
+  <hr>
+
+
+  <!--Social buttons-->
+  <div class="social-section text-center">
+    <ul class="list-unstyled list-inline">
+      <li class="list-inline-item"><a class="btn-floating btn-fb"><i class="fab fa-facebook-f"> </i></a></li>
+      <li class="list-inline-item"><a class="btn-floating btn-tw"><i class="fab fa-twitter"> </i></a></li>
+      <li class="list-inline-item"><a class="btn-floating btn-gplus"><i class="fab fa-google-plus-g"> </i></a></li>
+      <li class="list-inline-item"><a class="btn-floating btn-li"><i class="fab fa-linkedin-in"> </i></a></li>
+      <li class="list-inline-item"><a class="btn-floating btn-git"><i class="fab fa-github"> </i></a></li>
+    </ul>
+  </div>
+
+
+  <!--Copyright-->
+  <div class="footer-copyright py-3 text-center">
+    <div class="container-fluid">
+      <h4>© 2020 Copyright BookTalk</h4>
+    </div>
+  </div>
+
+
+</footer>
+
+
+</html>
