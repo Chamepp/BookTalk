@@ -26,6 +26,8 @@ Rails.application.routes.draw do
 
 
 
-  resources :cards
+  resources :cards do
+    resources :comments
+  end
 
 end
