@@ -1,3 +1,46 @@
-// Place all the styles related to the comments controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: https://sass-lang.com/
+
+
+.comment-introduction {
+
+  margin-left: 30px;
+  color: #08fcac;
+  font-family: 'Rubik', sans-serif;
+  font-size: 4vh;
+
+}
+
+.comments-label {
+
+  margin-left: 30px;
+  color: white;
+  font-family: 'Rubik', sans-serif;
+  font-size: 2vh;
+
+}
+
+.comments-textfield {
+
+  max-width: 25vw;
+  min-height: 5vh;
+  margin-left: 30px;
+  background-color: white;
+  font-family: 'Quicksand', sans-serif;
+
+}
+
+.comments-button {
+
+  margin-left: 30px;
+  min-width: 150px;
+  min-height: 60px;
+  font-size: 20px;
+  font-family: 'Quicksand', sans-serif;
+
+}
+
+.comments-card {
+
+  max-width: 20vw;
+  margin-left: 30px;
+  margin-bottom: 10px;
+}
