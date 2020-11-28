@@ -1,7 +1,5 @@
 class CardsController < ApplicationController
-
-
-  def control_products; end
+  include CurrentAdminConcern
 
   # Show Card
   def show
@@ -37,6 +35,47 @@ class CardsController < ApplicationController
     end
 
   end
+
+  # Edit Cards
+  def edit
+    if set_current_admin
+      @card = Card.find(params[:id])
+
+    else
+      render 'pages/404'
+    end
+  end
+
+  # Update Cards
+  def update
+    @card = Card.find(params[:id])
+    if @card.update(card_params)
+      redirect_to @card
+
+    else
+      render json: {
+          status: :dead,
+          creation: :denied,
+          name: @card.cardname,
+          price: @card.cardprice,
+          description: @card.carddes,
+          genre: @card.cardgen,
+          pages: @card.cardpage,
+          year: @card.cardyear,
+          downloads: @card.carddownload,
+          errors: @card.errors.any?,
+          info: @card.errors.full_messages.each
+      }
+    end
+  end
+
+  # Delete Cards
+  def destroy
+    @card = Card.find(params[:id])
+    @card.destroy
+    redirect_to explore_path
+  end
+
 
   # Card Params
   public def card_params
