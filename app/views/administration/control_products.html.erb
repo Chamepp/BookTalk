@@ -57,7 +57,7 @@
 <body>
 <nav class="dashboard-nav sticky-top flex-md-nowrap p-0 shadow">
   <%= image_tag("RootLogo.png", :alt => 'RootLogo', :class => 'RootLogoDashboard') %>
-  <%= submit_tag "SignOut", {:class => 'signout-admin btn btn-primary float-right'} %>
+  <%= link_to "SignOut", admin_destroy_login_path, {:class => 'signout-admin btn btn-primary float-right'} %>
 
   <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-toggle="collapse" data-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -95,7 +95,7 @@
               <path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/>
             </svg>
 
-            <%= link_to "DashBoard", admin_path %>
+            <%= link_to "DashBoard", dashboard_path %>
           </li>
 
           <li class="dashboard-menu-items">
