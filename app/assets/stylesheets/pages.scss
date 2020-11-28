@@ -556,3 +556,51 @@ $cards-per-line: (
     }
   }
 }
+
+.notfound-style {
+
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 130px;
+  border-radius: 150px 150px 150px 150px;
+
+}
+
+
+.notfound-button {
+
+  padding: 2vh 2vw;
+  font-size: 20px;
+  font-family: 'Nunito', sans-serif;
+  background-color: #08fcac;
+  border: none;
+
+
+}
+
+.edit-button {
+
+  background-color: #ff8547;
+  border: transparent;
+
+}
+
+.edit-button:hover {
+
+  background-color: #ffa262;
+
+}
+
+.delete-button {
+
+  background-color: #15898c;
+  border: transparent;
+
+}
+
+.delete-button:hover {
+
+  background-color: #1ca2a5;
+
+}
