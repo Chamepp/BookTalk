@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+
+
+
+
+<!-- Body Contents -->
+<body style="background-color: #152734; overflow-x: hidden;">
+
+<!-- Instruct -->
+<h1 class="login-instruct text-center">Admin Login</h1>
+
+<!-- Form Control -->
+<%= form_tag admin_path, method: :post, :class => 'card login-form' do %>
+  <%= image_tag("FormLogo.png", :alt => 'FormImage', :class => 'FormImage') %>
+
+  <!-- Form Contents -->
+  <div class="card-body">
+
+    <!-- Email -->
+    <%= label_tag :username, 'Username', :class => 'login-email-label' %> <br>
+    <%= text_field_tag :username, nil  ,:placeholder => 'Username', :class => 'login-email form-control float-left' %>
+
+
+    <!-- Password -->
+    <%= label_tag :password, 'Password', :class => 'login-password-label' %> <br>
+    <%= password_field_tag :password, nil , :placeholder => 'Password', :class => 'login-password form-control float-left' %>
+
+    <br>
+
+    <!-- Finalization -->
+    <%= submit_tag "Login", :class => 'signup-button-main btn btn-primary lead' %>
+
+  </div>
+
+<% end %>
+
+
+<% yield %>
+</body>
+
+
+
+
+
+</html>
