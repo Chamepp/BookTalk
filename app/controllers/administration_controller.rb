@@ -1,8 +1,42 @@
 class AdministrationController < ApplicationController
-  http_basic_authenticate_with name: 'ashkan', password: 'ashkan'
+  include CurrentAdminConcern
 
   # Admin Page
-  def admin; end
+  def dashboard
+    if set_current_admin
 
+      render :dashboard
+
+    else
+
+      render 'pages/404'
+
+    end
+  end
+  
+  # Products Page
+  def control_products
+    if set_current_admin
+
+      render :control_products
+
+    else
+
+      render 'pages/404'
+
+    end
+  end
+
+  # Customers Page
+  def control_customers
+    if set_current_admin
+
+      render :control_customers
+
+    else
+    render 'pages/404'
+
+    end
+  end
 
 end
