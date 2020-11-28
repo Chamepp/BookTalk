@@ -25,17 +25,8 @@
 
 
 
-
-          <!-- SignUp & Login Buttons -->
-          <% if @user == false %>
-            <div class="nav-buttons">
-              <%= link_to "LogIn", login_path, :class => 'btn btn-primary login-button' %>
-              <%= link_to "SignUp", signup_path, :class => 'btn btn-primary signup-button' %>
-            </div>
-
-
-            <!-- User Controls & Profiles -->
-          <% else %>
+          <!-- User Icons & Profiles -->
+          <% if @current_user %>
 
             <div>
 
@@ -69,8 +60,16 @@
 
             </div>
 
-          <% end %>
 
+            <!-- User Login & Signup Buttons -->
+          <% else %>
+
+            <div class="nav-buttons">
+              <%= link_to "LogIn", login_path, :class => 'btn btn-primary login-button' %>
+              <%= link_to "SignUp", signup_path, :class => 'btn btn-primary signup-button' %>
+            </div>
+
+          <% end %>
 
         </nav>
 
@@ -380,6 +379,21 @@
               <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
             </svg>
           </a>
+          <% if @current_admin %>
+            <!-- Edit Button -->
+            <%= link_to edit_card_path(card), :class => 'btn btn-primary edit-button' do %>
+            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-pen-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M13.498.795l.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001z"/>
+            </svg>
+              <% end %>
+
+            <!-- Delete Button -->
+            <%= link_to card_path(card), method: :delete, :class => 'btn btn-primary delete-button' do %>
+              <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-trash-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5a.5.5 0 0 0-1 0v7a.5.5 0 0 0 1 0v-7z"/>
+              </svg>
+            <% end %>
+          <% end %>
         </div>
 
         <!-- Card Footer -->
