@@ -31,16 +31,8 @@
 
 
 
-          <!-- SignUp & Login Buttons -->
-          <% if @user == false %>
-            <div class="nav-buttons">
-              <%= link_to "LogIn", login_path, :class => 'btn btn-primary login-button' %>
-              <%= link_to "SignUp", signup_path, :class => 'btn btn-primary signup-button' %>
-            </div>
-
-
-            <!-- User Controls & Profiles -->
-            <% else %>
+          <!-- User Icons & Profiles -->
+          <% if @current_user %>
 
             <div>
 
@@ -72,6 +64,15 @@
                 </svg>
               <% end %>
 
+            </div>
+
+
+            <!-- User Login & Signup Buttons -->
+            <% else %>
+
+            <div class="nav-buttons">
+              <%= link_to "LogIn", login_path, :class => 'btn btn-primary login-button' %>
+              <%= link_to "SignUp", signup_path, :class => 'btn btn-primary signup-button' %>
             </div>
 
         <% end %>
