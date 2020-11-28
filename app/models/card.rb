@@ -1,9 +1,9 @@
 class Card < ApplicationRecord
-  has_many :comments
-  validates :cardname, presence: true, length: { minimum: 5 }
-  validates :cardprice, presence: true, length: { minimum: 1 }
-  validates :carddes, presence: true, length: { minimum: 30, maximum: 40 }
+  has_many :comments, dependent: :delete_all
+  validates :cardname, presence: true, length: { minimum: 2 }
+  validates :carddes, presence: true, length: { minimum: 50, maximum: 200 }
+  validates :cardprice, presence: true
   validates :cardgen, presence: true
-  validates :cardpage, presence: true, length: { minimum: 1 }
-  validates :cardyear, presence: true, length: { minimum: 1 }
+  validates :cardpage, presence: true
+  validates :cardyear, presence: true
 end
