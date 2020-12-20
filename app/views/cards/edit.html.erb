@@ -3,61 +3,65 @@
 <body style="background-color: #002e41">
 
 
-<h2 style="font-family: 'Pacifico', cursive; color: #2BFF88">Edit Cards</h2>
-<hr style="border-color: white;">
+<h2 style="font-family: 'Rubik', sans-serif; font-size: 5vh; margin-left: 30px; margin-top: 50px; color: #2BFF88">Edit Cards</h2>
 
 
 <%= form_for :card , url: card_path(@card), method: :patch do |f| %>
 
 
   <!-- First Action -->
-  <%= f.label :cardname, "Name", :class => 'create-labels' %> <br>
-  <%= f.text_field :cardname, :placeholder => 'Name' , :class => 'form-control' %> <br>
+  <%= f.label :cardname, "Name", :class => 'edit-labels text-center' %> <br>
+  <%= f.text_field :cardname, :placeholder => 'Name' , :class => 'edit-form form-control' %> <br>
 
   <!-- Second Action -->
-  <%= f.label :cardprice, "Price", :class => 'create-labels' %> <br>
-  <%= f.number_field :cardprice, :placeholder => 'Price', :class => 'form-control'%> <br>
+  <%= f.label :cardprice, "Price", :class => 'edit-labels' %> <br>
+  <%= f.number_field :cardprice, :placeholder => 'Price', :class => 'edit-form form-control'%> <br>
 
 
   <!-- Third Action -->
-  <%= f.label :carddes, "Description", :class => 'create-labels' %> <br>
-  <%= f.text_area :carddes, :placeholder => 'Description', :class => 'form-control' %> <br>
+  <%= f.label :carddes, "Description", :class => 'edit-labels' %> <br>
+  <%= f.text_area :carddes, :placeholder => 'Description', :class => 'edit-form form-control' %> <br>
 
   <!-- Fourth Action -->
-  <%= f.label :cardgen, "Genre", :class => 'create-labels' %> <br>
+  <%= f.label :cardgen, "Genre", :class => 'edit-labels' %> <br>
   <%= f.select :cardgen, options_for_select([
                                                 ['Comedy','Comedy'], ['Drama','Drama'], ['Romance','Romance'], ['Horror','Horror'], ['Romance','Romance'],
                                                 ['Classic','Classic'], ['Life','Life'], ['Sports','Sports'], ['Science','Science']
                                             ], params[:cardgen]),
-               {}, { :class => 'span3 controls controls-row form-control' } %> <br>
+               {}, { :class => 'span3 controls controls-row edit-form form-control' } %> <br>
 
   <!-- Fifth Action -->
-  <%= f.label :cardpage, "Pages", :class => 'create-labels' %> <br>
-  <%= f.number_field :cardpage, :placeholder => 'Pages', :class => 'form-control'%> <br>
+  <%= f.label :cardpage, "Pages", :class => 'edit-labels' %> <br>
+  <%= f.number_field :cardpage, :placeholder => 'Pages', :class => 'edit-form form-control'%> <br>
 
   <!-- Sixth Action -->
-  <%= f.label :cardyear, "Year", :class => 'create-labels' %> <br>
-  <%= f.number_field :cardyear, :placeholder => 'Year', :class => 'form-control'%> <br>
+  <%= f.label :cardyear, "Year", :class => 'edit-labels' %> <br>
+  <%= f.number_field :cardyear, :placeholder => 'Year', :class => 'edit-form form-control'%> <br>
 
   <!-- Seventh Action -->
-  <%= f.label :carddownload, "Downloads", :class => 'create-labels' %> <br>
-  <%= f.number_field :carddownload, :placeholder => 'Downloads', :class => 'form-control'%> <br>
+  <%= f.label :carddownload, "Downloads", :class => 'edit-labels' %> <br>
+  <%= f.number_field :carddownload, :placeholder => 'Downloads', :class => 'edit-form form-control'%> <br>
 
   <!-- Eighth Action -->
-  <%= f.label :cardpremium, "Premium", :class => 'create-labels' %> <br>
+  <%= f.label :cardpremium, "Premium", :class => 'edit-labels' %> <br>
 
-  <%= f.radio_button :cardpremium, true %>
-  <%= f.label :cardpremium, "Yes", :value => "Premium", :style => "color: white; font-family: rubik, cursive; margin-right: 20px;" %>
+  <div class="edit-form">
+    <%= f.radio_button :cardpremium, true %>
+    <%= f.label :cardpremium, "Yes", :value => "Premium", :style => "color: white; font-family: rubik, cursive; margin-right: 20px;" %>
 
-  <%= f.radio_button :cardpremium, false, :checked => true %>
-  <%= f.label :cardpremium, "No", :value => "Free",  :style => "color: white; font-family: rubik, cursive;" %>
+    <%= f.radio_button :cardpremium, false, :checked => true %>
+    <%= f.label :cardpremium, "No", :value => "Free",  :style => "color: white; font-family: rubik, cursive;" %>
 
+    <%= f.label :cardpic, "Profile Image"%> <br>
+    <%= f.file_field :cardpic %> <br>
+  </div>
 
   <br> <br>
 
   <!-- Finalization -->
-  <%= f.submit "Create", :class => 'btn btn-primary' %>
+  <%= f.submit "Edit", :class => 'btn btn-primary edit-button-main btn btn-primary notfound-button' %>
 
+<br> <br> <br> <br>
 <% end %>
 
 </body>
