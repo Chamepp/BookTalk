@@ -79,6 +79,6 @@ class CardsController < ApplicationController
 
   # Card Params
   public def card_params
-    params.require(:card).permit(:cardname, :cardprice, :carddes, :cardgen, :cardpage, :cardyear, :carddownload, :cardpremium)
+    params.require(:card).permit(:cardname, :cardprice, :carddes, :cardgen, :cardpage, :cardyear, :carddownload, :cardpremium, :cardpic)
   end
 end
