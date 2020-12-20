@@ -5,7 +5,11 @@ class SessionsController < ApplicationController
   def new; end
 
   # Login View
-  def login; end
+  def login
+    if set_current_user
+      render 'pages/404'
+    end
+  end
 
   # Create Login
   def create
