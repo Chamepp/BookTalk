@@ -31,7 +31,7 @@
             <div>
 
               <!-- Wishlist Icon -->
-              <%= link_to explore_path, :class => 'user-icons', :style => 'text-decoration: none;' do %>
+              <%= link_to profile_path, :class => 'user-icons', :style => 'text-decoration: none;' do %>
                 <span class="badge badge-primary badge-pill">32</span>
                 <svg width="1.8em" height="1.8em" viewBox="0 0 16 16" class="bi bi-heart-fill icon-hover" fill="white" xmlns="http://www.w3.org/2000/svg">
                   <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
@@ -42,7 +42,7 @@
 
 
               <!-- Cart Icon -->
-              <%= link_to explore_path, :class => 'user-icons', :style => 'text-decoration: none;' do %>
+              <%= link_to profile_path, :class => 'user-icons', :style => 'text-decoration: none;' do %>
                 <span class="badge badge-primary badge-pill">6</span>
                 <svg width="1.8em" height="1.8em" viewBox="0 0 16 16" class="bi bi-bag-fill user-icons icon-hover" fill="white" xmlns="http://www.w3.org/2000/svg">
                   <path fill-rule="evenodd" d="M8 1a2.5 2.5 0 0 0-2.5 2.5V4h5v-.5A2.5 2.5 0 0 0 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5z"/>
@@ -50,7 +50,7 @@
               <% end %>
 
               <!-- Profile Icon -->
-              <%= link_to explore_path, :class => 'user-icons', :style => 'text-decoration: none;' do %>
+              <%= link_to profile_path, :class => 'user-icons', :style => 'text-decoration: none;' do %>
                 <svg width="1.8em" height="1.8em" viewBox="0 0 16 16" class="bi bi-person-circle user-icons icon-hover" fill="white" xmlns="http://www.w3.org/2000/svg">
                   <path d="M13.468 12.37C12.758 11.226 11.195 10 8 10s-4.757 1.225-5.468 2.37A6.987 6.987 0 0 0 8 15a6.987 6.987 0 0 0 5.468-2.63z"/>
                   <path fill-rule="evenodd" d="M8 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
@@ -366,7 +366,9 @@
       <div class="card card-deck-item shadow-sm">
 
         <!-- Header Image -->
-        <img class="card-img-top" src="..." alt="Card image cap">
+        <% if card.cardpic.attached? %>
+          <%= image_tag(url_for(card.cardpic), :alt => 'Card image cap', :class => 'card-img-top') %>
+        <% end %>
 
         <!-- Card Body -->
         <div class="card-body">
@@ -385,7 +387,7 @@
             <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-pen-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd" d="M13.498.795l.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001z"/>
             </svg>
-              <% end %>
+            <% end %>
 
             <!-- Delete Button -->
             <%= link_to card_path(card), method: :delete, :class => 'btn btn-primary delete-button' do %>
