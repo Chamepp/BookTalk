@@ -458,8 +458,12 @@
         <%= f.label :cardpremium, "Yes", :value => "Premium", :style => "color: white; font-family: rubik, cursive; margin-right: 20px;" %>
 
         <%= f.radio_button :cardpremium, false, :checked => true %>
-        <%= f.label :cardpremium, "No", :value => "Free",  :style => "color: white; font-family: rubik, cursive;" %>
+        <%= f.label :cardpremium, "No", :value => "Free",  :style => "color: white; font-family: rubik, cursive;" %> <br>
 
+        <div id="direct-upload">
+          <%= f.label :cardpic, "Profile Image"%> <br>
+          <%= f.file_field :cardpic %> <br>
+        </div>
 
         <br> <br>
 
