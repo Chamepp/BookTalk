@@ -1,11 +1,14 @@
 Rails.application.routes.draw do
 
+
   # Main Root
   root 'pages#index', as: 'root'
+
 
   # Main Routes
   get 'explore' => 'pages#explore', as: 'explore'
   get 'about' => 'pages#about', as: 'about'
+
 
   # SignUp Sources
   get 'signup' => 'registrations#signup', as: 'signup'
@@ -24,6 +27,10 @@ Rails.application.routes.draw do
   get 'admin/dashboard' => 'administration#dashboard', as: 'dashboard'
   get 'admin/dashboard/products' => 'administration#control_products', as: 'control_product'
   get 'admin/dashboard/customers' => 'administration#control_customers', as: 'control_customers'
+
+  # Profile Sources
+  get 'profile' => 'profile#profile', as: 'profile'
+  get 'profile/settings' => 'profile#settings', as: 'settings'
 
   # Creation Sources
   post 'admin/dashboard/products' => 'cards#create'
