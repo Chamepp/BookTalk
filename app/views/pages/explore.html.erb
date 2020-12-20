@@ -375,7 +375,14 @@
           <h4 class="card-title"> <%= card.cardname %> </h4>
           <h5 class="card-title">$ <%= card.cardprice %></h5>
           <p class="card-text"> <%= card.carddes %> </p>
-          <%= link_to "+ Add To Cart", card_path(card), :class => 'btn btn-primary' %>
+          <%= link_to card_path(card), :class => 'btn btn-primary' do %>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16">
+              <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
+              <path fill-rule="evenodd" d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"/>
+            </svg>
+            Preview
+          <% end %>
+
           <a href="#" class="btn btn-danger">
             <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-heart-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
