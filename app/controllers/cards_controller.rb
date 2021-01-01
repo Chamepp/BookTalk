@@ -76,6 +76,20 @@ class CardsController < ApplicationController
     redirect_to explore_path
   end
 
+  # User Profile
+  def library
+    @user = User.all
+    @user = User.find_by(params[:id])
+    type = params[:type]
+
+    if type.eql?('add')
+      @current_user.books_additions << @card
+
+    elsif type.eql?('remove')
+      @current_user.books_additions.delete(@card)
+    end
+  end
+
 
   # Card Params
   public def card_params
