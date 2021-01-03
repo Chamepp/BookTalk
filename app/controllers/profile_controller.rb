@@ -10,6 +10,8 @@ class ProfileController < ApplicationController
     @user = User.all
     @user = User.find_by(params[:id])
 
+    @book = Book.all
+
 
   end
 
