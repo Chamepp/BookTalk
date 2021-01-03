@@ -15,8 +15,6 @@ class PagesController < ApplicationController
   # SignUp Page
   def signup; end
 
-  # New Card
-
 
   # SignUp Creation
   def create
