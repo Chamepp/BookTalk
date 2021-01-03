@@ -1,4 +1,7 @@
 class Card < ApplicationRecord
+  belongs_to :user
+  has_many :books
+  has_many :added_cards, through: :books, source: :user
   has_many :comments, dependent: :delete_all
   has_one_attached :cardpic
   validates :cardname, presence: true, length: { minimum: 2 }
