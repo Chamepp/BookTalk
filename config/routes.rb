@@ -31,6 +31,7 @@ Rails.application.routes.draw do
   # Profile Sources
   get 'profile' => 'profile#profile', as: 'profile'
   get 'profile/settings' => 'profile#settings', as: 'settings'
+  get 'profile/library' => 'cards#library', as: 'library'
 
   # Creation Sources
   post 'admin/dashboard/products' => 'cards#create'
@@ -38,10 +39,15 @@ Rails.application.routes.draw do
   get 'cards' => 'cards#edit', as: 'card_edit'
   get 'cards' => 'cards#destroy', as: 'card_delete'
   put 'cards' => 'cards#update', as: 'card_update'
+  put "add", to: "cards#library"
+  put "remove", to: "cards#library"
 
   resources :cards do
     resources :comments
   end
 
+  resources :user do
+    resources :book
+  end
 end
 
