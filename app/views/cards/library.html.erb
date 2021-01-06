@@ -1,0 +1,105 @@
+<html>
+
+
+
+<body style="background-color: #0b1822">
+
+<nav class="profile-nav sticky-top shadow">
+  <%= image_tag("RootLogo.png", :alt => 'RootLogo', :class => 'RootLogoDashboard') %>
+
+  <svg width="1.8em" height="1.8em" viewBox="0 0 16 16" class="bi bi-person-circle user-icons icon-hover float-right" fill="white" xmlns="http://www.w3.org/2000/svg" style="margin-top: 37px; margin-right: 20px;">
+    <path d="M13.468 12.37C12.758 11.226 11.195 10 8 10s-4.757 1.225-5.468 2.37A6.987 6.987 0 0 0 8 15a6.987 6.987 0 0 0 5.468-2.63z"/>
+    <path fill-rule="evenodd" d="M8 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+    <path fill-rule="evenodd" d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z"/>
+  </svg>
+
+</nav>
+
+
+<div class="container-fluid side-container">
+  <div class="row">
+
+    <div class="sidebar-sticky position-fixed sticky-top pt-3">
+
+
+      <div class="user-heading">
+
+        <a href="#" class="main-profile-image">
+          <% if @user.avatar.attached? %>
+            <%= image_tag(url_for(@user.avatar)) %>
+          <% else %>
+            <%= image_tag("SlideThree.png") %>
+          <% end %>
+        </a>
+
+        <br> <br>
+
+        <h1 class="profile-name"> <%= @user.fname %> <%= @user.lname %> </h1>
+        <p class="profile-email"> <%= @user.email %> </p>
+
+        <br> <br> <br>
+
+        <ul class="nav flex-column">
+
+
+          <li class="profile-nav-items">
+            <%= link_to "Home", profile_path %>
+          </li>
+
+          <li class="profile-nav-items">
+            <%= link_to "Explore", explore_path %>
+          </li>
+
+          <li class="profile-nav-items">
+            <%= link_to "Recently Added", root_path %>
+          </li>
+
+          <li class="profile-nav-items">
+            <%= link_to "Settings", settings_path %>
+          </li>
+
+        </ul>
+
+        <br> <br> <br>
+        <br> <br> <br>
+        <br> <br> <br>
+        <br> <br> <br>
+        <br> <br> <br>
+
+      </div>
+
+
+      <br>
+
+
+
+
+
+
+    </div>
+
+
+
+
+    <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4" style="background-color: #0b1822; color: white;">
+
+      <!-- User Library -->
+      <div class="content">
+
+
+
+      </div>
+    </main>
+
+
+
+  </div>
+
+</div>
+
+
+</body>
+
+
+
+</html>
