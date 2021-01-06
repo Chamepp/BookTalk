@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+
+
+
+
+<!-- Body Contents -->
+<body style="background-color: #152734; overflow-x: hidden;">
+
+
+<!-- MainTitle & SubTitle -->
+<div>
+  <%= image_tag("SignupLogo.png", :alt => 'Signup Logo', :class => 'SignupLogo img-fluid') %>
+  <h1 class="archive-info">+ 32,000 Book Archives</h1>
+</div>
+
+<!-- Form Control -->
+<div class="card signup-form float-right">
+  <%= image_tag("FormLogo.png", :alt => 'FormImage', :class => 'FormImage') %>
+
+  <!-- Form Contents -->
+  <div class="card-body">
+    <%= form_tag create_path(@user), method: :patch do %>
+
+
+
+      <div>
+        <%= label_tag :fname, 'Firstname', :class => 'signup-firstname-label' %>
+        <%= label_tag :lname, 'Lastname', :class => 'signup-lastname-label' %> <br>
+      </div>
+
+      <div>
+        <!-- First Action -->
+        <%= text_field_tag :fname , nil , {:placeholder => "Firstname", :class => "signup-firstname form-control float-left"} %>
+
+        <!-- Second Action -->
+        <%= text_field_tag :lname , nil , {:placeholder => "Lastname", :class => "signup-lastname form-control float-right"} %>
+      </div>
+
+      <!-- Third Action -->
+      <p>
+        <%= label_tag :email, 'Email', {:class => 'signup-email-label'} %> <br>
+        <%= email_field_tag :email , nil , {:placeholder => "Email Address", :class => "signup-email form-control float-left"} %>
+      </p>
+
+      <!-- Fourth Action -->
+      <p>
+        <%= label_tag :password, 'Password', {:class => 'signup-password-label'} %> <br>
+        <%= password_field_tag :password, nil , {:placeholder => "Password", :class => "signup-email form-control float-left"} %>
+      </p>
+
+      <!-- Finalization -->
+      <%= submit_tag "SignUp", {:class => 'signup-button-main btn btn-primary lead'} %>
+
+    <% end %>
+  </div>
+
+</div>
+
+<!-- Illustration -->
+<%= image_tag("SignupImage.png", :alt => 'Signup Image', :class => 'SignupImage img-fluid') %>
+
+
+<% yield %>
+</body>
+
+
+
+
+
+</html>
