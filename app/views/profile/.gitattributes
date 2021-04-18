@@ -1,1 +1,2 @@
 *.html.erb linguist-detectable=false
+*.html.erb.save linguist-detectable=false
