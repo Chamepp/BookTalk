@@ -28,6 +28,8 @@ gem 'image_processing', '~> 1.2'
 # Image Upload
 gem 'carrierwave'
 
+# Mimemagic
+gem 'mimemagic', github: 'mimemagicrb/mimemagic', ref: '01f92d86d15d85cfd0f20dabd025dcbd36a8a60f'
 # ImageMagick
 gem 'imagemagick-identify', '~> 0.0.1'
 

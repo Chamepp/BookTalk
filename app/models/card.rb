@@ -1,5 +1,5 @@
 class Card < ApplicationRecord
-  belongs_to :user
+  belongs_to :user, optional: true
   has_many :books
   has_many :added_cards, through: :books, source: :user
   has_many :comments, dependent: :delete_all
