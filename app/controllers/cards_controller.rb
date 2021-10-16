@@ -51,6 +51,21 @@ class CardsController < ApplicationController
     @card = Card.find(params[:id])
     if @card.update(card_params)
       redirect_to @card
+
+    else
+      render json: {
+          status: :dead,
+          creation: :denied,
+          name: @card.cardname,
+          price: @card.cardprice,
+          description: @card.carddes,
+          genre: @card.cardgen,
+          pages: @card.cardpage,
+          year: @card.cardyear,
+          downloads: @card.carddownload,
+          errors: @card.errors.any?,
+          info: @card.errors.full_messages.each
+      }
     end
   end
 
