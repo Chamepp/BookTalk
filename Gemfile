@@ -25,6 +25,9 @@ gem 'bcrypt', '~> 3.1.7'
 # Use Active Storage variant
 gem 'image_processing', '~> 1.2'
 
+# Faker Data
+gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
+
 # Image Upload
 gem 'carrierwave'
 

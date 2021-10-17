@@ -1,4 +1,12 @@
 GIT
+  remote: https://github.com/faker-ruby/faker.git
+  revision: 2e105aab7865f607c6bd3da7079d29382efd7f6c
+  branch: master
+  specs:
+    faker (2.19.0)
+      i18n (>= 1.6, < 2)
+
+GIT
   remote: https://github.com/mimemagicrb/mimemagic.git
   revision: 01f92d86d15d85cfd0f20dabd025dcbd36a8a60f
   ref: 01f92d86d15d85cfd0f20dabd025dcbd36a8a60f
@@ -228,6 +236,7 @@ DEPENDENCIES
   byebug
   capybara (>= 2.15)
   carrierwave
+  faker!
   image_processing (~> 1.2)
   imagemagick-identify (~> 0.0.1)
   jbuilder (~> 2.7)
