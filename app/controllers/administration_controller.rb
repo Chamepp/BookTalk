@@ -1,5 +1,6 @@
 class AdministrationController < ApplicationController
   include CurrentAdminConcern
+  require 'faker'
 
   # Admin Page
   def dashboard
