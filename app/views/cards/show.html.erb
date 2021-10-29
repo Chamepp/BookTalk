@@ -155,7 +155,7 @@
 
 
   <!-- Add Library Form -->
-  <%= link_to "+ Add Library", add_path(@card, type: "add"), method: :put, :class => 'btn btn-primary' %>
+  <%= link_to "Download", rails_blob_path(@card.pdffile, disposition: "attachment"), :class => 'btn btn-primary' %>
 
   <a href="#" class="btn btn-danger">
     <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-heart-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
