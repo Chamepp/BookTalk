@@ -4,6 +4,7 @@ class Card < ApplicationRecord
   has_many :added_cards, through: :books, source: :user
   has_many :comments, dependent: :delete_all
   has_one_attached :cardpic
+  has_one_attached :pdffile
   validates :cardname, presence: true, length: { minimum: 2 }
   validates :carddes, presence: true, length: { minimum: 50, maximum: 200 }
   validates :cardprice, presence: true
