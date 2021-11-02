@@ -28,11 +28,6 @@ Rails.application.routes.draw do
   get 'admin/dashboard/products' => 'administration#control_products', as: 'control_product'
   get 'admin/dashboard/customers' => 'administration#control_customers', as: 'control_customers'
 
-  # Profile Sources
-  get 'profile' => 'profile#profile', as: 'profile'
-  get 'profile/settings' => 'profile#settings', as: 'settings'
-  get 'profile/library' => 'cards#library', as: 'library'
-
   # Creation Sources
   post 'admin/dashboard/products' => 'cards#create'
   get 'cards' => 'cards#show'
