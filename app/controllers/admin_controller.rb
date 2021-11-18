@@ -1,5 +1,5 @@
 class AdminController < ApplicationController
-  http_basic_authenticate_with name: 'chamepp', password: 'chamepp'
+  http_basic_authenticate_with name: 'admin', password: 'admin'
   
   # Admin Login
   def admin; end
