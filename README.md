@@ -1,12 +1,7 @@
-![Header](BookTalk.png)
-
-<br>
-
 # BookTalk
 **BookTalk** is an ebook management platform.
 
 # Material
-![Body](BookTalkEnv.png) <br> <br>
 
 
 | Materials | Details | Description |
@@ -19,7 +14,4 @@
 | Css | Version 3 | Main Used Language For Styling Lollipop Contents. |
 | Scss | Style Variables | Used For Decreasing The Confusion for Color Managment and Other Stuffs.|
 | Google Fonts | Link Tags | Embed Links to Main Source Including Pacifico, Roboto and Bangers.  |
-
-
-![Body](BookTalkPack.png) <br> <br>
 
